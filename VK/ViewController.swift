@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         scrollView.contentInset.bottom = keyboardSize.height
     }
     @IBAction func buttonTapped(_ sender: Any) {
-        
         let login = loginField.text
         let password = passwordField.text
         
@@ -45,16 +44,6 @@ class ViewController: UIViewController {
         } else {
             print("Пароль или логин неверны")
         }
-        
     }
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
-
 }
 
