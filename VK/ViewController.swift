@@ -35,15 +35,21 @@ class ViewController: UIViewController {
         print("keyboard shown \(keyboardSize.height)")
         scrollView.contentInset.bottom = keyboardSize.height
     }
-    @IBAction func buttonTapped(_ sender: Any) {
-        let login = loginField.text
-        let password = passwordField.text
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let login = loginField.text!
+        let password = passwordField.text!
         
-        if login == "admin", password == "12345" {
-            print("Вход выполнен")
+        if login == "admin" && password == "12345" {
+            return true
         } else {
-            print("Пароль или логин неверны")
+            let alert = UIAlertController(title: "Ошибка", message: "Неверный логин или пароль", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Понятно", style: .default)
+            alert.addAction(action)
+            present(alert, animated: true)
+        
+            return false
         }
     }
+
 }
 
