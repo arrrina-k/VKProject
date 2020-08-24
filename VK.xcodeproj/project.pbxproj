@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D045695A24F15E540091AB7B /* MyFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045695924F15E540091AB7B /* MyFriendsCell.swift */; };
+		D045695D24F162830091AB7B /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045695C24F162830091AB7B /* FriendsViewController.swift */; };
+		D045696024F1829E0091AB7B /* MyGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045695F24F1829E0091AB7B /* MyGroupsCell.swift */; };
+		D045696324F189670091AB7B /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045696224F189670091AB7B /* MyGroupsViewController.swift */; };
+		D045696624F276A50091AB7B /* NewGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045696524F276A50091AB7B /* NewGroupsCell.swift */; };
+		D045696824F276CC0091AB7B /* NewGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045696724F276CC0091AB7B /* NewGroupsViewController.swift */; };
+		D045696B24F29BED0091AB7B /* PhotoFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045696A24F29BED0091AB7B /* PhotoFriendCell.swift */; };
+		D045696D24F29C410091AB7B /* PhotoFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045696C24F29C410091AB7B /* PhotoFriendViewController.swift */; };
+		D045697024F2F5E90091AB7B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045696F24F2F5E90091AB7B /* User.swift */; };
+		D045697324F2F60B0091AB7B /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045697224F2F60B0091AB7B /* Group.swift */; };
+		D045697524F316640091AB7B /* NewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045697424F316630091AB7B /* NewGroup.swift */; };
 		D0C1749E24E81C76008B0554 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C1749D24E81C76008B0554 /* AppDelegate.swift */; };
 		D0C174A024E81C76008B0554 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C1749F24E81C76008B0554 /* SceneDelegate.swift */; };
 		D0C174A224E81C76008B0554 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C174A124E81C76008B0554 /* ViewController.swift */; };
@@ -16,6 +27,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D045695924F15E540091AB7B /* MyFriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsCell.swift; sourceTree = "<group>"; };
+		D045695C24F162830091AB7B /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		D045695F24F1829E0091AB7B /* MyGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsCell.swift; sourceTree = "<group>"; };
+		D045696224F189670091AB7B /* MyGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsViewController.swift; sourceTree = "<group>"; };
+		D045696524F276A50091AB7B /* NewGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupsCell.swift; sourceTree = "<group>"; };
+		D045696724F276CC0091AB7B /* NewGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupsViewController.swift; sourceTree = "<group>"; };
+		D045696A24F29BED0091AB7B /* PhotoFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFriendCell.swift; sourceTree = "<group>"; };
+		D045696C24F29C410091AB7B /* PhotoFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFriendViewController.swift; sourceTree = "<group>"; };
+		D045696F24F2F5E90091AB7B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D045697224F2F60B0091AB7B /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		D045697424F316630091AB7B /* NewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroup.swift; sourceTree = "<group>"; };
 		D0C1749A24E81C76008B0554 /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C1749D24E81C76008B0554 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C1749F24E81C76008B0554 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +59,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D045695B24F162530091AB7B /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				D045695924F15E540091AB7B /* MyFriendsCell.swift */,
+				D045695C24F162830091AB7B /* FriendsViewController.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		D045695E24F182670091AB7B /* MyGroups */ = {
+			isa = PBXGroup;
+			children = (
+				D045695F24F1829E0091AB7B /* MyGroupsCell.swift */,
+				D045696224F189670091AB7B /* MyGroupsViewController.swift */,
+			);
+			path = MyGroups;
+			sourceTree = "<group>";
+		};
+		D045696424F276890091AB7B /* NewGroups */ = {
+			isa = PBXGroup;
+			children = (
+				D045696524F276A50091AB7B /* NewGroupsCell.swift */,
+				D045696724F276CC0091AB7B /* NewGroupsViewController.swift */,
+			);
+			path = NewGroups;
+			sourceTree = "<group>";
+		};
+		D045696924F29BBA0091AB7B /* PhotoOfMyFriend */ = {
+			isa = PBXGroup;
+			children = (
+				D045696A24F29BED0091AB7B /* PhotoFriendCell.swift */,
+				D045696C24F29C410091AB7B /* PhotoFriendViewController.swift */,
+			);
+			path = PhotoOfMyFriend;
+			sourceTree = "<group>";
+		};
+		D045696E24F2F5C80091AB7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D045696F24F2F5E90091AB7B /* User.swift */,
+				D045697224F2F60B0091AB7B /* Group.swift */,
+				D045697424F316630091AB7B /* NewGroup.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D0C1749124E81C76008B0554 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +131,11 @@
 				D0C174A624E81C7B008B0554 /* Assets.xcassets */,
 				D0C174A824E81C7B008B0554 /* LaunchScreen.storyboard */,
 				D0C174AB24E81C7B008B0554 /* Info.plist */,
+				D045695B24F162530091AB7B /* Friends */,
+				D045696924F29BBA0091AB7B /* PhotoOfMyFriend */,
+				D045696E24F2F5C80091AB7B /* Model */,
+				D045696424F276890091AB7B /* NewGroups */,
+				D045695E24F182670091AB7B /* MyGroups */,
 			);
 			path = VK;
 			sourceTree = "<group>";
@@ -138,9 +211,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D045696624F276A50091AB7B /* NewGroupsCell.swift in Sources */,
 				D0C174A224E81C76008B0554 /* ViewController.swift in Sources */,
+				D045696324F189670091AB7B /* MyGroupsViewController.swift in Sources */,
 				D0C1749E24E81C76008B0554 /* AppDelegate.swift in Sources */,
+				D045696D24F29C410091AB7B /* PhotoFriendViewController.swift in Sources */,
 				D0C174A024E81C76008B0554 /* SceneDelegate.swift in Sources */,
+				D045697324F2F60B0091AB7B /* Group.swift in Sources */,
+				D045695A24F15E540091AB7B /* MyFriendsCell.swift in Sources */,
+				D045696B24F29BED0091AB7B /* PhotoFriendCell.swift in Sources */,
+				D045697024F2F5E90091AB7B /* User.swift in Sources */,
+				D045697524F316640091AB7B /* NewGroup.swift in Sources */,
+				D045695D24F162830091AB7B /* FriendsViewController.swift in Sources */,
+				D045696024F1829E0091AB7B /* MyGroupsCell.swift in Sources */,
+				D045696824F276CC0091AB7B /* NewGroupsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
