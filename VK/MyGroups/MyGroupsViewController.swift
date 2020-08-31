@@ -10,24 +10,8 @@ import UIKit
 
 class MyGroupsViewController: UIViewController {
     
-    
     @IBOutlet weak var tableView: UITableView!
     var groups = Group.getGroups()
-    
-//    @IBAction func addGroup(segue: UIStoryboardSegue) {
-//        if segue.identifier == "addGroup" {
-//
-//            guard let newGroupsViewController = segue.source as? NewGroupsViewController else {return}
-//            if let indexPath = newGroupsViewController.tableView.indexPathForSelectedRow {
-//
-//                let group = newGroupsViewController.newGroups[indexPath.row]
-//
-//                    groups.append(group)
-//                    tableView.reloadData()
-//            }
-//        }
-//    }
-//    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         switch editingStyle {
@@ -58,8 +42,9 @@ class MyGroupsViewController: UIViewController {
             
             return cell
         }
-        
-       
-        
+        func groupChosen(groupName: Group) {
+            groups.append(groupName)
+            tableView.reloadData()
+        }
 }
 
