@@ -17,7 +17,6 @@ class PhotoFriendViewController: UIViewController {
             
             collectionView.dataSource = self
         }
-
 }
 
 extension PhotoFriendViewController: UICollectionViewDataSource {
