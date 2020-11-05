@@ -8,16 +8,25 @@
 
 import UIKit
 
-class FriendsViewController: UIViewController {
-  
+class FriendsViewController: UIViewController, LetterPickerDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
-     var users = User.getUsers()
+    @IBOutlet weak var letterPicker: LetterPicker!
+    var users = User.getUsers().sorted { $0.userName < $1.userName}
         
         override func viewDidLoad() {
                 super.viewDidLoad()
-                
                 tableView.dataSource = self
+            letterPicker.delegate = self
         }
+    func letterPicked(_ letter: String) {
+        guard let index = users.firstIndex(where: { $0.userName.lowercased().prefix(1) == letter.lowercased() }) else { return }
+        
+        let indexPath = IndexPath(row: index, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
+        
+      
     }
 
     extension FriendsViewController: UITableViewDataSource {
