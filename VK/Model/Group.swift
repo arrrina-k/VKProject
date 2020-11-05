@@ -8,11 +8,12 @@
 
 import Foundation
 
-struct Group {
+struct Group: Equatable {
     var groupName: String
     var groupImage: String
     
     static var groupsName = ["Корпорация монстров", "Алеша Попович", "Дом"]
+    static var myGroupsName = ["Шрек"]
     
     static func getGroups() -> [Group]{
         
@@ -23,5 +24,15 @@ struct Group {
         }
         
         return groups
+    }
+    
+    static func getMyGroups() -> [Group]{
+        
+        var myGroups = [Group]()
+        
+        for myGroup in myGroupsName{
+            myGroups.append(Group(groupName: myGroup, groupImage: myGroup))
+        }
+        return myGroups
     }
 }
