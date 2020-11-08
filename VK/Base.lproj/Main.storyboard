@@ -161,16 +161,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bx6-TH-x73">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bx6-TH-x73">
+                                <rect key="frame" x="0.0" y="39" width="414" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="703" id="Dqm-4Z-xOo"/>
+                                    <constraint firstAttribute="height" constant="720" id="Dqm-4Z-xOo"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="635" id="JRW-pS-wo3"/>
                                 </constraints>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="QDb-s3-AzX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="M2R-kR-KpS" id="1Mo-Lr-31H"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="myFriendsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myFriendsCell" rowHeight="100" id="2rd-p6-dNy" customClass="MyFriendsCell" customModule="VK" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="72" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2rd-p6-dNy" id="KB8-rv-9ST">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -252,6 +260,7 @@
                     <navigationItem key="navigationItem" title="Мои друзья" id="DPO-sn-JfG"/>
                     <connections>
                         <outlet property="letterPicker" destination="Eko-TG-jhE" id="BDY-oq-39t"/>
+                        <outlet property="searchBar" destination="QDb-s3-AzX" id="NUA-MZ-ti0"/>
                         <outlet property="tableView" destination="Bx6-TH-x73" id="2zD-Kj-03X"/>
                     </connections>
                 </viewController>
