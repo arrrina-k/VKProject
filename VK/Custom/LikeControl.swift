@@ -12,7 +12,11 @@ class LikeControl: UIControl {
     let likeImage = UIImageView()
     let likesCount = UILabel()
     let stack = UIStackView()
-    
+    private func setUp() {
+    let tap = UIGestureRecognizer(target: self, action: #selector(viewTapped))
+            addGestureRecognizer(tap)
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -28,8 +32,9 @@ class LikeControl: UIControl {
         likeImage.image = UIImage(systemName: "heart")
         likeImage.tintColor = .black
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        viewTapped(sender: tap)
         if  likesCount.text == "0" {
             likesCount.text = "1"
             likeImage.image = UIImage(systemName: "heart.fill")
@@ -41,5 +46,18 @@ class LikeControl: UIControl {
             likesCount.textColor = .black
             likeImage.tintColor = .black
         }
+    }
+    
+    @objc private func viewTapped(sender: UIGestureRecognizer) {
+        transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        
+        UIView.animate(withDuration: 0.7,
+                       delay: 0,
+                       options: [],
+                       animations: {
+            self.transform = .identity
+        },
+        completion: nil
+        )
     }
 }
