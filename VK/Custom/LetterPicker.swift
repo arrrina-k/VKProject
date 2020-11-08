@@ -18,7 +18,7 @@ class LetterPicker: UIView {
     
     var letters: [String] = "абвгдеёжзийклмнопрстуфхцчшщэюя".map{ String($0) } {
         didSet {
-            
+            reload()
         }
     }
     private var buttons: [UIButton] = []
@@ -82,6 +82,8 @@ class LetterPicker: UIView {
         let buttonHeight = bounds.height / CGFloat(buttons.count)
         let buttonIndex = Int(anchorPoint.y / buttonHeight)
         
+        guard buttonIndex >= 0 && buttonIndex < buttons.count else { return }
+        
         let button = buttons[buttonIndex]
         unhighlightButtons()
         button.isHighlighted = true
@@ -97,5 +99,12 @@ class LetterPicker: UIView {
 
     private func unhighlightButtons() {
         buttons.forEach { $0.isHighlighted = false}
+    }
+    
+    private func reload() {
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        buttons = []
+        lastPressedButton = nil
+        setupButtons()
     }
 }
