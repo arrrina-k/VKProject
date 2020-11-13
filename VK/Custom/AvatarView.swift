@@ -80,6 +80,9 @@ class AvatarView: UIView {
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
+        
+        let tap = UIGestureRecognizer(target: self, action: #selector(viewTapped))
+        addGestureRecognizer(tap)
     }
 
     override func layoutSubviews() {
@@ -93,5 +96,21 @@ class AvatarView: UIView {
         shadowView.layer.shadowColor = shadowColor.cgColor
         shadowView.layer.shadowOpacity = shadowOpacity
     }
+    
+    @objc private func viewTapped(sender: UIGestureRecognizer) {
+        transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        
+        AvatarView.animate(withDuration: 0.7,
+               delay: 0,
+               usingSpringWithDamping: 0.5,
+               initialSpringVelocity: 0,
+               options: [],
+               animations:  {
+                self.transform = .identity
+               },
+               completion: nil
+        )
+    }
 }
+
 

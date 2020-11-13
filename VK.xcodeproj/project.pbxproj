@@ -28,6 +28,7 @@
 		D0D5D029255458FC004CE174 /* LetterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5D028255458FC004CE174 /* LetterPicker.swift */; };
 		D0D5D030255475E7004CE174 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5D02F255475E7004CE174 /* HomePageViewController.swift */; };
 		D0D5D034255475F8004CE174 /* HomePageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5D033255475F8004CE174 /* HomePageCell.swift */; };
+		D0D5D03C2559ECE5004CE174 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5D03B2559ECE5004CE174 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		D0D5D028255458FC004CE174 /* LetterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterPicker.swift; sourceTree = "<group>"; };
 		D0D5D02F255475E7004CE174 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		D0D5D033255475F8004CE174 /* HomePageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCell.swift; sourceTree = "<group>"; };
+		D0D5D03B2559ECE5004CE174 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				D0D5D028255458FC004CE174 /* LetterPicker.swift */,
 				D04E0E2324FD03C100E2DA06 /* LikeControl.swift */,
 				D0D5D0252553ECEF004CE174 /* AvatarView.swift */,
+				D0D5D03B2559ECE5004CE174 /* SearchView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D045696624F276A50091AB7B /* NewGroupsCell.swift in Sources */,
+				D0D5D03C2559ECE5004CE174 /* SearchView.swift in Sources */,
 				D0C174A224E81C76008B0554 /* ViewController.swift in Sources */,
 				D045696324F189670091AB7B /* MyGroupsViewController.swift in Sources */,
 				D0D5D030255475E7004CE174 /* HomePageViewController.swift in Sources */,

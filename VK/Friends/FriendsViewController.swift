@@ -12,7 +12,7 @@ class FriendsViewController: UIViewController, LetterPickerDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var letterPicker: LetterPicker!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchView: SearchView!
     
     var sections: [String] = []
     var allUsers: [User] = []
@@ -61,7 +61,7 @@ class FriendsViewController: UIViewController, LetterPickerDelegate, UITableView
     }
     
     private func reloadDataSource(){
-        filterItems(text: searchBar.text)
+        filterItems(text: searchView.text)
         
         let allLetters = filteredUsers.map { String($0.userName.uppercased().prefix(1)) }
         sections = Array(Set(allLetters)).sorted()
@@ -95,7 +95,7 @@ class FriendsViewController: UIViewController, LetterPickerDelegate, UITableView
         
         let user = getItem(for: indexPath)
         cell.titelLabel.text = user.userName
-        cell.friendAvatarImageView.image = UIImage(named: user.userImage)
+        cell.avatarView.image = UIImage(named: allUsers[indexPath.row].userImage)
         return cell
     }
     

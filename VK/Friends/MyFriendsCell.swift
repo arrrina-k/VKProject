@@ -11,8 +11,7 @@ import UIKit
 class MyFriendsCell: UITableViewCell {
    
     @IBOutlet weak var titelLabel: UILabel!
-    @IBOutlet weak var friendAvatarImageView: UIImageView!
-    @IBOutlet weak var avatarView: UIView!
+    @IBOutlet weak var avatarView: AvatarView!
 
 }
 
