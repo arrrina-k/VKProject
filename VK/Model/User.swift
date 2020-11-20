@@ -23,7 +23,7 @@ struct User {
                             "Бараш",
                             "Степанида",
                             "Железная няня"]
-    
+   
     static func getUsers() -> [User]{
         
         var users = [User]()
@@ -34,4 +34,8 @@ struct User {
         
         return users
     }
+    static var randomOne: User {
+        return User(userName: "Крош", userImage: "1")
+    }
 }
+

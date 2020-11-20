@@ -35,15 +35,21 @@ class LikeControl: UIControl {
             likeImage.image = UIImage(systemName: "heart.fill")
             likesCount.textColor = .red
             likeImage.tintColor = .red
-            UIView.animate(withDuration: 0.2, delay: 0, animations: {
-                        self.stack.transform = CGAffineTransform(scaleX: 2, y: 2)
+            UIView.animate(withDuration: 1.0, delay: 0, animations: {
+                self.stack.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                    })
+            UIView.animate(withDuration: 0.1, delay: 0, animations: {
+                        self.stack.transform = CGAffineTransform(scaleX: 1, y: 1)
                     })
         } else {
             likesCount.text = "0"
             likeImage.image = UIImage(systemName: "heart")
             likesCount.textColor = .black
             likeImage.tintColor = .black
-            UIView.animate(withDuration: 0.2, delay: 0, animations: {
+            UIView.animate(withDuration: 1.0, delay: 0, animations: {
+                self.stack.transform = CGAffineTransform(scaleX: 2, y: 2)
+                    })
+            UIView.animate(withDuration: 0.1, delay: 0, animations: {
                         self.stack.transform = CGAffineTransform(scaleX: 1, y: 1)
                     })
         }
