@@ -8,29 +8,19 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController {
+final class HomePageViewController: UITableViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    let news = NewsItem.fake
     
-    override func viewDidLoad() {
-           super.viewDidLoad()
-           
-           tableView.dataSource = self
-       }
-}
-
-extension HomePageViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return news.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-  
-             guard let cell = tableView.dequeueReusableCell(withIdentifier: "homePageCell") as? HomePageCell else {fatalError()}
-          
-             return cell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomePageCell", for: indexPath) as! HomePageCell
+        cell.configure(item: news[indexPath.row])
+        return cell
     }
-    
     
 }
 
